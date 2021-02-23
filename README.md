@@ -1,8 +1,8 @@
-# A Brief Introduction to LaTeX
+### A Brief Introduction to LaTeX
 
 One of the greatest motivating forces for Donald Knuth when he began developing the original TeX system was to create something that allowed simple construction of mathematical formulae, while looking professional when printed. The fact that he succeeded was most probably why TeX (and later on, LaTeX) became so popular within the scientific community. Typesetting mathematics is one of LaTeX's greatest strengths. It is also a large topic due to the existence of so much mathematical notation.
 
-# About this document:
+### About this document:
 This "document" is by no means meant to be a tutorial to teach the basics of LaTeX. This was prepared to serve as a reference once you've learned the basics. My personal suggestion would be that, you should learn LaTeX from the official documentation or wikibook or any other course/source that suits you the most.
 
 I hope this helps others of the community and if at least one person thinks that this was helpful then, i will think that my work has paid off.
@@ -14,7 +14,7 @@ I hope this helps others of the community and if at least one person thinks that
   * https://www.overleaf.com/latex/templates/symbol-table/fhqmttqvrnhk
  
  
-# Websites, Articles/ Blogs that may come in Handy:
+### Websites, Articles/ Blogs that may come in Handy:
   * LaTeX Packages - https://ctan.org/pkg
   * LaTeX Topic Based Packages & Cheat Sheets - https://ctan.org/topics/cloud
   * LaTeX Wikibooks - https://en.wikibooks.org/wiki/LaTeX
