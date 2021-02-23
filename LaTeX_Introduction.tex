@@ -1,0 +1,485 @@
+\documentclass[12pt, twocolumn]{article}
+
+\title{A Brief Introduction to \LaTeX}
+\author{Maidul Hasan}
+\date{}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{hyperref}
+\usepackage{graphicx}
+
+\begin{document}
+ 
+ \maketitle
+ 
+ \section*{The Idea of \LaTeX}
+ One of the greatest motivating forces for Donald Knuth when he began developing the original TeX system was to create something that allowed simple construction of mathematical formulae, while looking professional when printed. The fact that he succeeded was most probably why TeX (and later on, LaTeX) became so popular within the scientific community. Typesetting mathematics is one of LaTeX's greatest strengths. It is also a large topic due to the existence of so much mathematical notation. \\
+
+If your document requires only a few simple mathematical formulas, plain LaTeX has most of the tools that you will ever need. If you are writing a scientific document that contains numerous complex formulas, the \textbf{``amsmath"} package introduces several new commands that are more powerful and flexible than the ones provided by basic LaTeX. The \textbf{``mathtools"} package fixes some amsmath quirks and adds some useful settings, symbols, and environments to amsmath. \\
+
+ \noindent \textbf{Before We Begin:} \\
+ 1. All \LaTeX\ commands starts with a backslash (\textbackslash). \\
+ 2. Main arguments are defined inside braces \{\} and the optional arguments can be set inside brackets [ ]. Optional arguments are defined before the main arguments. \\
+ 3. In a \TeX\ document, comments starts with a, \% sign and are ignored during typesetting. Thus, they don't appear on the original text itself.
+
+ \section{Creating a Basic \LaTeX\ Document}
+\begin{itemize}
+ \item The first line of any \LaTeX\ document, defines what the \textbf{ documentclass} of that document would be. It tells the \TeX\ Engine, how to typeset the document.
+ 
+ Some common document classes are, \textit{article, book, letter, report, scrartcl, scrreprt, scrbook, prosper, beamer} or, some other custom defined documentclass. Some optinal arguments can also be defined when declaring a documentclass (some of \LaTeX\ commands also takes optional arguments). Some of the useful optional arguments when defining the documentclass are --- font size (ex. 11 pt), paper size (ex. a4), encoding (ex. utf8), twocolumn etc. \\
+ 
+ \underline{\textit{Usage:}} \\
+ 
+ \textbackslash documentclass [opt, opt]\{class\} \\ 
+ 
+ \pagebreak
+
+ \item  Now comes the \textbf{title} section. \\
+ 
+ \underline{\textit{Usage:}} \\
+ 
+ \textbackslash title \{text\} \\
+ \textbackslash author \{names\} \\
+ \textbackslash date \{text\} \\
+ 
+ \emph{Note that,} you have to insert the \textbf{\textbackslash maketitle} command, after the document begin declaration line, for the \textbf{title} section to apeear in the document. If you don't want the date to appear then leave the argument as empty.
+
+ \item After that, we define what packages do we want to use when writing the document. This provides us with extra features additional to what \LaTeX\ initially offers and enables you with more control over the document creation process. \\
+ 
+ \underline{\textit{Usage:}} \\
+ 
+ \textbackslash usepackage[opt,opt]\{package name\} \\
+ 
+ All the available \LaTeX\ packages and their documentation can be found here at \url{https://ctan.org/pkg/}.
+ 
+ You can find topic specific packages and additional help at \url{https://ctan.org/topics/cloud}
+ 
+
+ \item The main document or, the document body starts by declaring the beggining of the document and finishes by declaring the end of the document.\\
+ \pagebreak
+ 
+ \underline{\textit{Usage:}} \\
+ 
+ \textbackslash begin\{document\} \\
+ \hspace*{6mm} \textbackslash maketitle  \\
+ \hspace*{6mm} .... Actual Document Body ..... \\
+ \textbackslash end\{document\} \\
+ 
+ \textbf{{\normalsize Document Structure:}}
+ \LaTeX\ allows you to break up documents into the following hierarchy: \textbf{part, chapter, section, subsection, subsubsection, paragraph, subparagraph} (part being highest in the hierarchy, and subparagraph being the lowest).
+ 
+ \end{itemize}
+ 
+ \section{Basic Formatting of a \LaTeX\ Document}
+ 
+ \subsection{Text Formatting}
+ \begin{enumerate}
+   \item \textbackslash textbf\{text\} - \textbf{Bold}, Not Bold.
+   
+ \% \emph{Note that,} the Formatting will only applied to the text inside the {} braces.
+ \item \textbackslash textit\{text\} - \textit{Italic}
+ \item \textbackslash underline\{text\} - \underline{Underline}
+ \item \{\textbackslash large text\} - {\large large}
+ \item \{\textbackslash Large text\} - {\Large Large}
+ \end{enumerate}
+
+ 
+ \subsection{Paragraph Formatting}
+ \begin{enumerate}
+  \item By dafault new paragraphs are indented. To avoid indentation use \textbackslash noindent command at the start of the line.
+  
+  \item \textbackslash \textbackslash \ - Begin new line without creating a new paragraph.
+
+  \item \textbackslash pagebreak - Start a New page.
+  
+  \pagebreak
+  \item \textbackslash begin\{center\} \\ \hspace*{6mm} Centered Text \\ \textbackslash end\{center\}
+  \begin{center} \big\Downarrow \end{center}
+  \begin{center} Centered Text \end{center}
+     
+  \item \textbackslash begin\{flushleft\} \\ \hspace*{6mm} Left Justified \\ \textbackslash end\{flushleft\}
+  \begin{center} \big\Downarrow \end{center}
+  \begin{flushleft} Left Justified \end{flushleft}
+
+  \item \textbackslash begin\{flushright\} \\ \hspace*{6mm} Right Justified \\ \textbackslash end\{flushright\}
+  \begin{center} \big\Downarrow \end{center}
+  \begin{flushright} Right Justified \end{flushright}
+ 
+ \end{enumerate}
+
+ 
+\subsection{Special Characters, Symbols \& Delimeters}
+ \begin{enumerate}
+  \item \textbackslash textbackslash - \textbackslash
+  \item \textbackslash ldots - \ldots
+  \item \$ \textbackslash cdot \$ - $ \cdot $ (Denotes dot multiplication)
+  \item \textbackslash textbar - \textbar
+  \item \textbackslash textbullet - \textbullet
+  \item \textbackslash textless - \textless
+  \item \textbackslash textgreater - \textgreater
+ \end{enumerate}
+
+ 
+Other special characters (i.e. \#, \$, \%, \^\ , \&, \{, \}, etc) are written after a backslash (\textbackslash) when needed in the document. \\
+
+\noindent To see how to write all the symbols withing a \LaTeX\ document see \url{https://www.dickimaw-books.com/latex/novices/html/symbols.html} and, \url{https://en.wikibooks.org/wiki/LaTeX/Special_Characters}.
+ 
+ \subsection*{Miscellaneous}
+ \begin{enumerate}
+  \item \textbackslash linespread\{x\} - Changes the line spacing by the multiplier of x.
+  \item \textbackslash tableofcontents - Inserts a Table of Contents where written.
+  \item Use \textbackslash pagestyle\{empty\} command for empty header, footer and no page numbers.
+  \item Use a *, as in \textbackslash section*\{title\}, to not number a particular item---these items will also not appear in the table of contents.
+  \item \textbackslash hspace\{l\} - Horizontal space \hspace{10pt} of length l (ex. l=10pt).
+  \item \textbackslash vspace\{l\} - Vertical space of length l. \vspace{10pt}
+  \item \textbackslash rule\{w\}\{h\} - Line of width w and height h. \rule{3pt}{10pt}
+\end{enumerate}
+
+
+\section{Referencing}
+In \LaTeX\ floating environments can be referred to from elsewhere in the document. But, what is a Floating Environment?
+
+\textbf{Floating Environment:} Floats are containers for things in a document that cannot be broken over a page. \LaTeX\ by default recognizes ``table" and ``figure" floats, but you can define new ones of your own. Floats are there to deal with the problem of the object that won't fit on the present page and to help when you really don't want the object here just now.
+
+Floats are not part of the normal stream of text, but separate entities, positioned in a part of the page to themselves (top, middle, bottom, left, right, or wherever the designer specifies). They always have a caption describing them and they are always numbered so they can be referred to from elsewhere in the text.
+
+One can reference to Floats after they appeared or even before the item apeared in the text! \\
+
+ \underline{\textit{Usage:}} \\
+
+ A marker for cross-reference using the command, \textbf{\textbackslash label\{marker\}}, often of the form \textbf{\textbackslash label\{sec:item\}} is set before the ending statement of a ``Float" and when needed we can just use \textbf{\textbackslash ref\{marker\}} to refer to it.
+
+\section{Lists}
+
+ \subsection{Bulleted List}
+ 
+ \underline{\textit{Usage:}} \\
+ 
+ \textbackslash begin\{itemize\}
+ 
+ \hspace*{6mm} \textbackslash item Bulleted Item 01
+ 
+ \hspace*{6mm} \textbackslash item Bulleted Item 02
+ 
+ \textbackslash end\{itemize\}
+
+ \begin{center} \big\Downarrow \end{center}
+ 
+ \begin{itemize}
+  \item Bulleted Item 01
+  \item Bulleted Item 02  
+ \end{itemize}
+
+ \subsection{Numbered List}
+ 
+ \underline{\textit{Usage:}} \\
+ 
+ \textbackslash begin\{enumerate\}
+ 
+ \hspace*{6mm} \textbackslash item Numbered Item 01
+ 
+ \hspace*{6mm} \textbackslash item Numbered Item 02
+ 
+ \textbackslash end\{enumerate\}
+
+ \begin{center} \big\Downarrow \end{center} 
+ 
+ \begin{enumerate}
+  \item Numbered Item 01
+  \item Numbered Item 02
+ \end{enumerate}
+
+ \subsection{Description List}
+  
+ \underline{\textit{Usage:}} \\
+ 
+ \textbackslash begin\{description\}
+ 
+  \hspace*{6mm} \textbackslash item [Name] Maidul Hasan
+  
+  \hspace*{6mm} \textbackslash item [ID] 1703016
+  
+  \hspace*{6mm} \textbackslash item [Department] Department of Mechanical Engineering
+  
+ \textbackslash end\{description\}
+
+ \begin{center} \big\Downarrow \end{center}
+ \begin{description}
+  \item [Name] Maidul Hasan
+  \item [ID] 1703016
+  \item [Department] Department of Mechanical Engineering
+ \end{description}
+
+
+ 
+ \section{Tabular Environment and Tables}
+ To typeset material in rows and columns, tabular is needed, while the table environment is a container for floating material similar to figure, into which a tabular environment may be included.
+ 
+ 
+ \subsection{Tabular Environment}
+ 
+  \underline{\textit{Usage:}} \\
+  
+ \noindent \textbackslash begin\{center\} \\ \\
+ \% \textbar: to put vertical lines \\
+ \% l: left justified text (other avaiable options are `r': right justified \& `c': centered) \\
+ \% p\{x\}: Used to define the width (x) of a certain column. This process is also known as \textbf{``Text Wrapping"} \\ \\
+ \textbackslash begin\{tabular\}\{\textbar l\textbar p\{4.7cm\}\textbar\} \\
+ \hspace*{6mm} \textbackslash hline \\
+  \hspace*{6mm} Name \& Maidul Hasan \textbackslash \textbackslash \\
+  \% \& denotes the end of a column and start of another \\
+  \hspace*{6mm} \textbackslash hline \\
+  \hspace*{6mm} ID \& 1703016 \textbackslash \textbackslash \\
+  \hspace*{6mm} \textbackslash hline \\
+  \hspace*{6mm} Department \& Department of Mechanical Engineering \\
+  \hspace*{6mm} \textbackslash hline \\
+  \textbackslash end\{tabular\} \\
+ 
+\noindent \textbackslash end\{center\} \\ \\
+  
+\begin{center} \big\Downarrow \end{center}
+ 
+ \begin{center}
+  
+ \begin{tabular}{|l|p{4.7cm}|}
+  \hline
+  Name & Maidul Hasan \\
+  \hline
+  ID & 1703016 \\
+  \hline
+  Department & Department of Mechanical Engineering \\
+  \hline
+ \end{tabular}
+ 
+ \end{center}
+
+This is the tabular environment of Table \ref{student01:info}.
+ 
+
+ \subsection{Tables}
+ 
+ \underline{\textit{Usage:}} \\
+
+\noindent \textbackslash begin\{table\}[htbp] \\
+
+ \noindent \% h: right here \\
+ \% t: top of the page \\
+ \% b: bottom of the page \\
+ \% p: next page \\
+
+\noindent \% Table Caption \\
+\textbackslash caption \{Student Information\} \\
+
+ \noindent \textbackslash begin\{center\} \\
+ \textbackslash begin\{tabular\}\{\textbar l\textbar p\{4.7cm\}\textbar\} \\
+ \hspace*{6mm} \textbackslash hline \\
+  \hspace*{6mm} Name \& Maidul Hasan \textbackslash \textbackslash \\
+  \hspace*{6mm} \textbackslash hline \\
+  \hspace*{6mm} ID \& 1703016 \textbackslash \textbackslash \\
+  \hspace*{6mm} \textbackslash hline \\
+  \hspace*{6mm} Department \& Department of Mechanical Engineering \\
+  \hspace*{6mm} \textbackslash hline \\
+  \textbackslash end\{tabular\} \\
+ \noindent \textbackslash end\{center\} \\
+
+\noindent \% Label of the table for future referencing \\
+\textbackslash label\{student01:info\} \\
+\textbackslash end\{table\} \\
+\begin{center} \big\Downarrow \end{center}
+
+\begin{table}[htbp]
+\caption{Student Information}
+
+\begin{center}
+ \begin{tabular}{|l|p{4.7cm}|}
+  \hline
+  Name & Maidul Hasan \\
+  \hline
+  ID & 1703016 \\
+  \hline
+  Department & Department of Mechanical Engineering \\
+  \hline
+ \end{tabular}
+\end{center}
+
+\label{student01:info}
+\end{table}
+
+
+\section{Graphical Elements}
+
+\underline{\textit{Usage:}} \\
+
+\textbackslash begin\{center\} \\
+ \hspace*{6mm} \textbackslash begin\{figure\}[htbp] \\
+ \hspace*{6mm} \textbackslash caption\{Lion Head Logo\} \\
+ \hspace*{6mm} \% the package ``graphicx" is needed to use the command \textbackslash includegraphics\} \\
+ \hspace*{5.5mm} \textbackslash includegraphics [width=3in, height=3in] \{lion\textunderscore head\textunderscore logo.jpg\} \\
+ \hspace*{6mm} \textbackslash label\{fig:lionlogo\} \\
+ \hspace*{6mm} \textbackslash end\{figure\} \\
+ \noindent \textbackslash end\{center\} \\
+ 
+ \begin{center} \big\Downarrow \end{center}
+\begin{center}
+ \begin{figure}[htbp]
+   \caption{Lion Head Logo}
+   \includegraphics[width=3in, height=3in]{lion_head_logo.jpg}
+   \label{fig:lion_logo}
+ \end{figure}
+\end{center}
+
+   \pagebreak
+   
+ \section{Bibliography and Citation}
+ \LaTeX\ provides a very good way for citation. This feature is specially useful when writing a research paper or any type of academic document.
+ 
+ \noindent For citation \LaTeX\ provides a special file format (.bib) where you can store all of your references in an elaborate and orderly fashion. For convenience you can store all of your references in one bib file and later you may use this bib file for referencing in other \TeX\ documents. \\
+ 
+ \subsection{BIB\TeX}
+ \textbf{Note: } When using BIB\TeX\ you need to run latex, bibtex and latex twice more to resolve dependencies. \\
+ 
+ \noindent \underline{\textit{Usage:}} \\
+ 
+ \noindent A .bib file may contain hundreds of citation references. But each entry follows a specific format which is shown below. \\
+
+ @entrytype\{key, \\
+ \hspace*{6mm} ...... Fields ..... \\ \hspace*{12mm} \}
+ 
+ \subsubsection{BIB\TeX\ Entry Types}
+ Some of the most common entry types in a bib\TeX\ file are,
+ \begin{description}
+  \item [@article] Journal or magazine article.
+  \item [@book] Book with publisher.
+  \item [@booklet] Book without publisher.
+  \item [@inbook] A part of a book and/or range of pages.
+  \item [@incollection] A part of book with its own title.
+  \item [@conference] Article in conference proceedings.
+  \item [@techreport] Tech report, usually numbered in series.
+  \item [@phdthesis] PhD. Thesis.
+  \item [@unpublished] Unpublished.
+  \item [@misc] If nothing else fits.
+ \end{description}
+
+ \subsubsection{BIB\TeX\ Fields}
+ Fields provides additional and essential informations about the entry-type.
+ 
+ \emph{Note that,} not all the fields needs to be filled. A specific entry-type may require one field while another one may not require that field.\\
+ 
+ \noindent Available BIB\TeX\ fields are listed below.
+ 
+ \begin{description}
+  \item [author] Names of authors, of format, \\ author = ``X and Y and Z"
+  \item [booktitle] Title of book when part of it is cited.
+  \item [edition] Edition of a book.
+  \item [chapter] Chapter or Section number.
+  \item [pages] Page range (2, 6, 9--12).
+  \item [series] Name of series of books.
+  \item [journal] Journal name.
+  \item [number] Number of journal or magazine.
+  \item [volume] Volume of a journal or book.
+  \item [month] Month published. Use 3 letter abbreviation.
+  \item [year] year of publication.
+  \item [institution] Sponsoring institution of tech. report.
+  \item [title] Title of work.
+  \item [type] Type of tech report, ex. ``Research Note".
+  \item [organization] Organization that sponsors a conference.
+  \item [school] Name of school (for thesis).
+  \item [editor] Editors names.
+  \item [publisher] Publisher's name.
+  \item [address] Address of the publisher. Not necessary for major publishers.
+  \item [note] Any additional information.
+  \end{description}
+
+ 
+ \subsection{Citation}
+ 
+  \noindent \underline{\textit{Usage:}} \\
+  
+  \noindent \hspace*{6mm} \textbackslash cite\{key\} \\
+  
+  The \LaTeX\ document should have the following two lines \textbf{just before \textbackslash end\{document\}}(As, the `References" section will appear where these two lines are putted, and we want the `References' section to appear at the end of the document), where `bibfile.bib' is the name of the BIB\TeX\ file. \\
+  
+  \noindent \hspace*{6mm} \textbackslash bibliographystyle\{bibtex style\} \\
+  \hspace*{6mm} \textbackslash bibliography\{bibfile\} \\
+  
+ \noindent Available bibtex styles are, \textit{plain, abbrv, alpha, abstract, apa, unsrt}. \\ \\
+ 
+ 
+ \noindent \textit{Ex:} For in depth introduction to \LaTeX\ you may read the official \LaTeX\ documentation \cite{latexdocumentation}.
+\noindent Also there are several cheat sheets available online. This one \cite{freedman2013} gives a brief introduction to \LaTeX\ and also works as a good cheat sheet for references. For a short but on point cheat sheet you may try this one \cite{chang2014}.
+
+ \section{Equations}
+ 
+ \subsection{Math Environment}
+ 
+  \noindent \underline{\textit{Usage:}} \\
+ 
+ \noindent \% Inline equation of format, \$ equation \$ \\ \\
+ \noindent \textbackslash textit\{Inline Equation:\} \$ \textbackslash int a\textasciicircum x dx = \textbackslash frac\{a\textasciicircum x\} \{ln(a)\} + C \$ \textbackslash \textbackslash  \\ \\
+ \noindent \% Newline equation of format, \textbackslash [equation\textbackslash] \\ \\
+ \textbackslash textit\{Newline Equation:\} \textbackslash [\textbackslash psi\textunderscore l = \textbackslash frac\{-1\}\{\textbackslash beta\} \textbackslash int\textasciicircum x\textunderscore 0 curl\textunderscore z \textbackslash tau\textunderscore \textbackslash eta dx + C ]
+ 
+ \begin{center}
+  \big\Downarrow
+ \end{center}
+
+ 
+ \noindent \textit{Inline Equation: } $ \int a^x ~ dx ~ = ~ \frac{a^x}{ln(a)} + C $ \\
+ \textit{Newline Equation: } \[ \psi_l ~ = ~ \frac{-1}{\beta} ~ \int^x_0 curl_z \tau_\eta ~ dx + C \]
+
+ \subsection{Float Equations}
+
+ \noindent \underline{\textit{Usage:}} \\
+ 
+ \noindent Equation \textbackslash ref\{eq:1\} and \textbackslash ref\{eq:2\} represents Maxwells' equation. \\ \\
+ 
+ \noindent \textbackslash begin\{equation\} \\ \\
+ \textbackslash overrightarrow\{A\} = \textbackslash frac\{\textbackslash mu\}\{4\textbackslash pi\} \textbackslash int\textunderscore V \textbackslash frac\{\textbackslash overrightarrow\{J\} (\textbackslash overrightarrow \{x\}') dV'\}\{r\} \\ \\
+ \textbackslash label\{eq:1\} \\
+ \textbackslash end\{equation\} \\ \\
+
+\noindent \textbackslash begin\{equation\} \\ \\
+ \textbackslash nabla \textbackslash cdot \textbackslash overrightarrow\{D\} = \textbackslash rho \\ \\
+ \textbackslash label\{eq:2\} \\
+ \textbackslash end\{equation\}
+ 
+ 
+  \begin{center}
+  \big\Downarrow
+ \end{center}
+
+ Equation ~\ref{eq:1} and ~\ref{eq:2} represents Maxwells' equation.
+ 
+ \begin{equation}
+ \overrightarrow{A} ~ = ~ \frac{\mu}{4\pi} \int_V \frac{\overrightarrow{J} (\overrightarrow{x}') ~ dV'}{r}
+ \label{eq:1}
+ \end{equation}
+
+ \begin{equation}
+ \nabla \cdot \overrightarrow{D} ~ = ~ \rho
+ \label{eq:2}
+ \end{equation}
+
+ \section{Conclussion}
+ This concludes our brief introduction to \LaTeX. But it's just the tip of the iceberg. Theres so much more to learn. So, i have listed sone links below that may come handy. \\
+ 
+ \begin{itemize}
+  \item \LaTeX\ Packages - \url{https://ctan.org/pkg}
+  \item \LaTeX\ Topic Based Packages \& Cheat Sheets - \url{https://ctan.org/topics/cloud}
+  \item \LaTeX\ Wikibooks - \url{https://en.wikibooks.org/wiki/LaTeX}
+  \item Kile(a \LaTeX\ IDE for Linux)'s Main Features - \url{https://docs.kde.org/trunk5/en/extragear-office/kile/intro_mainfeat.html#intro_docwizard}
+  \item IPython's Rich Display System - \url{https://nbviewer.jupyter.org/github/ipython/ipython/blob/2.x/examples/Notebook/Display%20System.ipynb#LaTeX}
+  \item Getting to Grips with \LaTeX, Andrew Roberts - \url{https://www.andy-roberts.net/writing/latex}
+  \item \LaTeX\ Special Characters \& Symbols - \url{https://www.dickimaw-books.com/latex/novices/html/symbols.html}
+  \item \LaTeX\ Special Characters \& Symbols - \url{https://kapeli.com/cheat_sheets/LaTeX_Math_Symbols.docset/Contents/Resources/Documents/index}
+  \item Learn How to Write Markdown \& \LaTeX\ in The Jupyter Notebook, Khelifi Ahmed Aziz - \url{https://towardsdatascience.com/write-markdown-latex-in-the-jupyter-notebook-10985edb91fd}
+ \end{itemize} 
+ 
+ \noindent Have fun. \\ Best Wishes \& Regards, Maidul Hasan \\
+ 
+ \noindent \textbf{Note:} 
+This "document" is by no means meant to be a tutorial to teach the basics of \LaTeX. This was prepared to serve as a reference once you've learned the basics. My personal suggestion would be that, you learn \LaTeX\ from the official documentation or wikibook or any other course/source that suits you the most.
+ 
+  \bibliographystyle{plain}
+ \bibliography{citation_references}
+\end{document}
