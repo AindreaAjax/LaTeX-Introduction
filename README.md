@@ -15,12 +15,12 @@ I hope this helps others of the community and if at least one person thinks that
  
  
 # Websites, Articles/ Blogs that may come in Handy:
-    * LaTeX Packages - https://ctan.org/pkg
-    * LaTeX Topic Based Packages & Cheat Sheets - https://ctan.org/topics/cloud
-    * LaTeX Wikibooks - https://en.wikibooks.org/wiki/LaTeX
-    * Kile(A LaTeX IDE for Linux)'s Main Features - https://docs.kde.org/trunk5/en/extragear-office/kile/intro_mainfeat.html#intro_docwizard
-    * IPython's Rich Display System - https://nbviewer.jupyter.org/github/ipython/ipython/blob/2.x/examples/Notebook/Display%20System.ipynb#LaTeX
-    * Getting to Grips with LaTeX, Andrew Roberts - https://www.andy-roberts.net/writing/latex
-    * LaTeX Special Characters & Symbols - https://www.dickimaw-books.com/latex/novices/html/symbols.html
-    * LaTeX Special Characters & Symbols - https://kapeli.com/cheat_sheets/LaTeX_Math_Symbols.docset/Contents/Resources/Documents/index
-    * Learn How to Write Markdown & LaTeX in The Jupyter Notebook, Khelifi Ahmed Aziz - https://towardsdatascience.com/write-markdown-latex-in-the-jupyter-notebook-10985edb91fd
+  * LaTeX Packages - https://ctan.org/pkg
+  * LaTeX Topic Based Packages & Cheat Sheets - https://ctan.org/topics/cloud
+  * LaTeX Wikibooks - https://en.wikibooks.org/wiki/LaTeX
+  * Kile(A LaTeX IDE for Linux)'s Main Features - https://docs.kde.org/trunk5/en/extragear-office/kile/intro_mainfeat.html#intro_docwizard
+  * IPython's Rich Display System - https://nbviewer.jupyter.org/github/ipython/ipython/blob/2.x/examples/Notebook/Display%20System.ipynb#LaTeX
+  * Getting to Grips with LaTeX, Andrew Roberts - https://www.andy-roberts.net/writing/latex
+  * LaTeX Special Characters & Symbols - https://www.dickimaw-books.com/latex/novices/html/symbols.html
+  * LaTeX Special Characters & Symbols - https://kapeli.com/cheat_sheets/LaTeX_Math_Symbols.docset/Contents/Resources/Documents/index
+  * Learn How to Write Markdown & LaTeX in The Jupyter Notebook, Khelifi Ahmed Aziz - https://towardsdatascience.com/write-markdown-latex-in-the-jupyter-notebook-10985edb91fd
