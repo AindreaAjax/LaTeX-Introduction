@@ -3,9 +3,7 @@
 One of the greatest motivating forces for Donald Knuth when he began developing the original TeX system was to create something that allowed simple construction of mathematical formulae, while looking professional when printed. The fact that he succeeded was most probably why TeX (and later on, LaTeX) became so popular within the scientific community. Typesetting mathematics is one of LaTeX's greatest strengths. It is also a large topic due to the existence of so much mathematical notation.
 
 ### About this document:
-This "document" is by no means meant to be a tutorial to teach the basics of LaTeX. This was prepared to serve as a reference once you've learned the basics. My personal suggestion would be that, you should learn LaTeX from the official documentation or wikibook or any other course/source that suits you the most.
-
-I hope this helps others of the community and if at least one person thinks that this was helpful then, i will think that my work has paid off.
+This is by no means meant to be a tutorial to teach the basics of LaTeX. This was prepared to serve as a reference once you've learned the basics. My suggestion would be that, you should learn LaTeX from the official documentation or wikibook or any other course/source that suits you the most.
  
  **Note:** The cheat sheets provided here aren't mine. So, thanks to those people who prepared these documents. A list of the links from where i've collected these cheat sheets is given here.
   * https://wch.github.io/latexsheet/
